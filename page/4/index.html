@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     枋
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">枋</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+<div id="main">
+  <section class="outer">
+  <article class="articles">
+    
+    
+    
+    
+    <article id="post-Java-多态的实现原理" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/22/Java-%E5%A4%9A%E6%80%81%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/"
+    >Java 多态的实现原理</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/22/Java-%E5%A4%9A%E6%80%81%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/" class="article-date">
+  <time datetime="2020-03-22T15:34:54.000Z" itemprop="datePublished">2020-03-22</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="Java-多态的实现原理"><a href="#Java-多态的实现原理" class="headerlink" title="Java 多态的实现原理"></a>Java 多态的实现原理</h1><p>java方法调用依赖于方法表。<br>没有太细节。后续可以考虑补充</p>
+<p>类引用调用和接口引用调用</p>
+<h2 id="类引用调用"><a href="#类引用调用" class="headerlink" title="类引用调用"></a>类引用调用</h2><p>jvm class文件调用方法的符号引用，然后在静态类型的方法表中找到偏移量，找不到就在父类中找</p>
+<ul>
+<li>方法区<ul>
+<li>类型信息<ul>
+<li>方法表</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+
+    
+    <article id="post-设计模式" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"
+    >设计模式</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/22/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time datetime="2020-03-22T14:27:33.000Z" itemprop="datePublished">2020-03-22</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p>设计模式的相关复习。 先把我用过的设计模式梳理一下</p>
+<h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><p>很常见</p>
+<p>Java 实现单例的方法有很多</p>
+<p>JavaScript呢？</p>
+<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>没怎么用，有用到过。<br>在Android中生成部分对象时. 主要是interface, 然后根据不同的条件Factory类返回Interface的不同实现Class</p>
+<h2 id="抽象工厂"><a href="#抽象工厂" class="headerlink" title="抽象工厂"></a>抽象工厂</h2><p>工厂是一个抽象类，用Producer类生成工厂类实现类</p>
+<h2 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h2><p>Builder</p>
+<h2 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h2><p>实现clone ,存入数据库， 从数据库取出时使用clone()</p>
+<h2 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter"></a>Adapter</h2><h2 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h2><p>Subject</p>
+<p>Observer</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+
+    
+    <article id="post-java/Java-String" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/22/java/Java-String/"
+    >Java String</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/22/java/Java-String/" class="article-date">
+  <time datetime="2020-03-22T14:22:03.000Z" itemprop="datePublished">2020-03-22</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="Java-String"><a href="#Java-String" class="headerlink" title="Java String"></a>Java String</h1><ul>
+<li>String</li>
+<li>StringBuffer</li>
+<li>StringBuilder</li>
+</ul>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><ul>
+<li>修改会创建新变量</li>
+</ul>
+<h2 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h2><ul>
+<li>线程安全</li>
+<li>执行速度慢</li>
+</ul>
+<h2 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h2><ul>
+<li>线程不安全</li>
+<li>执行速度快</li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+
+    
+    <article id="post-network/HTTP" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/22/network/HTTP/"
+    >HTTP</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/22/network/HTTP/" class="article-date">
+  <time datetime="2020-03-22T13:59:16.000Z" itemprop="datePublished">2020-03-22</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><p>HTTP 超文本传输协议</p>
+<h2 id="HTTP-1"><a href="#HTTP-1" class="headerlink" title="HTTP"></a>HTTP</h2><h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><ul>
+<li>客户端请求https</li>
+<li>服务端返回证书</li>
+<li>客服端生成秘钥，并用证书公钥进行加密</li>
+<li>服务端解密，获取秘钥</li>
+</ul>
+<h2 id="HTTP-状态码"><a href="#HTTP-状态码" class="headerlink" title="HTTP 状态码"></a>HTTP 状态码</h2><ul>
+<li>1 通知<ul>
+<li>100</li>
+<li>101</li>
+<li>102</li>
+</ul>
+</li>
+<li>2xx 成功<ul>
+<li>200 成功 OK</li>
+<li>201</li>
+<li>202</li>
+<li>203</li>
+<li>204 响应头没有body数据</li>
+<li>205</li>
+<li>206 断点续传</li>
+</ul>
+</li>
+<li>3xx 重定向<ul>
+<li>300</li>
+<li>301<ul>
+<li>Moved Permanently</li>
+</ul>
+</li>
+<li>302</li>
+<li>303</li>
+<li>304<ul>
+<li>Not Modified</li>
+<li>相应实体主体为空</li>
+<li>客户端已有数据，没必要重复发生</li>
+</ul>
+</li>
+<li>305</li>
+</ul>
+</li>
+<li>4 客户端错误<ul>
+<li>400 Bad Request</li>
+<li>401 Unauthorized</li>
+<li>403 Forbidden</li>
+<li>404 Not found</li>
+<li>409 COnflict</li>
+<li>410 Gone</li>
+</ul>
+</li>
+<li>5 服务端错误<ul>
+<li>500<ul>
+<li>Internal Server Error</li>
+</ul>
+</li>
+<li>502 bad gateway</li>
+</ul>
+</li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/" rel="tag">network</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+
+    
+    <article id="post-Java-与JavaScript-内存泄漏与内存溢出" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/22/Java-%E4%B8%8EJavaScript-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E4%B8%8E%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/"
+    >Java 与JavaScript 内存泄漏与内存溢出</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/22/Java-%E4%B8%8EJavaScript-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E4%B8%8E%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/" class="article-date">
+  <time datetime="2020-03-22T12:01:01.000Z" itemprop="datePublished">2020-03-22</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="Java-与JavaScript-的内存泄漏和内存溢出"><a href="#Java-与JavaScript-的内存泄漏和内存溢出" class="headerlink" title="Java 与JavaScript 的内存泄漏和内存溢出"></a>Java 与JavaScript 的内存泄漏和内存溢出</h1><h2 id="内存泄漏-memory-leak"><a href="#内存泄漏-memory-leak" class="headerlink" title="内存泄漏 memory leak"></a>内存泄漏 memory leak</h2><p>申请内存后无法释放已申请的内存空间</p>
+<h2 id="内存溢出-out-of-memory"><a href="#内存溢出-out-of-memory" class="headerlink" title="内存溢出 out of memory"></a>内存溢出 out of memory</h2><p>申请内存时，没有足够的内存空间可以使用</p>
+<h2 id="java中"><a href="#java中" class="headerlink" title="java中"></a>java中</h2><ul>
+<li><p>java内存回收机制</p>
+</li>
+<li><p>java内存泄漏原因</p>
+</li>
+<li><p>引用</p>
+<ul>
+<li>强引用</li>
+<li>软引用<ul>
+<li>内存不足时回收</li>
+</ul>
+</li>
+<li>弱引用<ul>
+<li>扫描时回收</li>
+</ul>
+</li>
+<li>虚引用<ul>
+<li>形同虚设</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="java内存回收机制"><a href="#java内存回收机制" class="headerlink" title="java内存回收机制"></a>java内存回收机制</h3><p>java中的内存主要指jvm虚拟机中的内存。通常一个java对象是被new或者通过放射的方式创建的。如果创建的是基础类型对象，则先在常量池中寻找，如果常量池中没有相对应得变量，则创建，然后栈中创建引用指向常量池</p>
+<h3 id="java内存泄漏原因"><a href="#java内存泄漏原因" class="headerlink" title="java内存泄漏原因"></a>java内存泄漏原因</h3><ul>
+<li>静态类集合类引起内存泄漏</li>
+<li>结合内对象hash不同后remove不起作用</li>
+<li>监听器没有remove</li>
+<li>各种连接</li>
+<li>单例模式<h2 id="JavaScript中"><a href="#JavaScript中" class="headerlink" title="JavaScript中"></a>JavaScript中</h2></li>
+<li>垃圾回收机制</li>
+<li>内存泄漏的识别方法</li>
+<li>命令行查看</li>
+<li>WeakMap</li>
+</ul>
+<h3 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h3><p> 引用计数</p>
+<h3 id="内存泄漏识别"><a href="#内存泄漏识别" class="headerlink" title="内存泄漏识别"></a>内存泄漏识别</h3><ul>
+<li>经验法则<ul>
+<li>连续5次gc， 内存占用一次比一次大</li>
+</ul>
+</li>
+<li>浏览器</li>
+<li>命令行 process.memoryUsage</li>
+</ul>
+<h3 id="WeakMap"><a href="#WeakMap" class="headerlink" title="WeakMap"></a>WeakMap</h3><p>ES^ 新数据结构</p>
+<ul>
+<li>WeakSet</li>
+<li>WeakMap</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> wm = <span class="keyword">new</span> <span class="built_in">WeakMap</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> element = <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>);</span><br><span class="line"></span><br><span class="line">wm.set(element, <span class="string">'some information'</span>);</span><br><span class="line">wm.get(element) <span class="comment">// "some information"</span></span><br></pre></td></tr></table></figure>
+<p>##异同</p>
+<p>参考<br><a href="http://www.ruanyifeng.com/blog/2017/04/memory-leak.html" target="_blank" rel="noopener">1</a></p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%85%E5%AD%98/" rel="tag">内存</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+
+    
+    <article id="post-network/TCP" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/22/network/TCP/"
+    >TCP</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/22/network/TCP/" class="article-date">
+  <time datetime="2020-03-22T09:20:11.000Z" itemprop="datePublished">2020-03-22</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h1><ul>
+<li>滑动窗口 （流量控制）</li>
+<li>拥塞控制<ul>
+<li>拥塞避免算法</li>
+</ul>
+</li>
+<li>网络模型</li>
+<li>3次握手</li>
+<li>4次挥手<ul>
+<li>timeout</li>
+</ul>
+</li>
+</ul>
+<h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2><ul>
+<li>Client<ul>
+<li>send ack</li>
+<li>send not ACK</li>
+<li>not send, ready to receive</li>
+<li>not send, not ready to  receive</li>
+</ul>
+</li>
+<li>Server<ul>
+<li>rec, ack, not send to process</li>
+<li>rec not ACK</li>
+<li>not rec</li>
+</ul>
+</li>
+</ul>
+<h2 id="拥塞控制"><a href="#拥塞控制" class="headerlink" title="拥塞控制"></a>拥塞控制</h2><p>防止过多数据注入到网络，可以使网络中的路由器或链路不过载</p>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
+<li>慢开始， 拥塞控制</li>
+<li>快重传，快恢复</li>
+</ul>
+<h4 id="慢开始-慢启动"><a href="#慢开始-慢启动" class="headerlink" title="慢开始 慢启动"></a>慢开始 慢启动</h4><ul>
+<li>发送方维持一个 拥塞窗口， 拥塞窗口和接收方共同决定发送窗口</li>
+<li>先发送1字节的试探报文</li>
+<li>当收到第一个字节的确认后，发送2字节报文</li>
+<li>2 ack， send 4 bit data. 2^n</li>
+<li>达到慢开始门限<ul>
+<li>cwnd &lt; ssthresh 慢开始算法</li>
+<li>cwnd &gt; ssthresh ,停止慢开始算法，改用拥塞避免算法</li>
+<li>cwnd = ssthresh 都可以</li>
+</ul>
+</li>
+</ul>
+<h4 id="拥塞避免算法"><a href="#拥塞避免算法" class="headerlink" title="拥塞避免算法"></a>拥塞避免算法</h4><ul>
+<li>每经过一个往返时间rtt则把发送方拥塞窗口+1</li>
+<li>网络拥塞时（李儒丢包），<ul>
+<li>慢开始门限设为原先一半</li>
+<li>cwnd = 1</li>
+<li>执行慢开始算法</li>
+</ul>
+</li>
+</ul>
+<h4 id="快重传-快回复"><a href="#快重传-快回复" class="headerlink" title="快重传 快回复"></a>快重传 快回复</h4><ul>
+<li>快重传<ul>
+<li>接收方 丢失包<ul>
+<li>后续包继续发送针对该包的重传请求</li>
+</ul>
+</li>
+<li>发送方<ul>
+<li>接收到3个一样的确认 就知道该包出现错误，立刻重传该包</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>快恢复<ul>
+<li>慢开始门限减半</li>
+<li>cwnd设为门限减半后的数值</li>
+<li>拥塞避免算法（高起点，线性增长）</li>
+</ul>
+</li>
+</ul>
+<h2 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h2><h3 id="OSI模型"><a href="#OSI模型" class="headerlink" title="OSI模型"></a>OSI模型</h3><ul>
+<li>应用层</li>
+<li>表示层</li>
+<li>会话层</li>
+<li>网络层</li>
+<li>传输层</li>
+<li>链路层</li>
+<li>物理层</li>
+</ul>
+<h3 id="TCP-IP模型"><a href="#TCP-IP模型" class="headerlink" title="TCP/IP模型"></a>TCP/IP模型</h3><ul>
+<li>应用层 报文 message</li>
+<li>传输层 报文段 segment</li>
+<li>网络层 分组 packet</li>
+<li>链路层 帧 frame</li>
+<li>物理层 PDU bit</li>
+</ul>
+<h2 id="3次握手"><a href="#3次握手" class="headerlink" title="3次握手"></a>3次握手</h2><p>Three way handshake ， 建立tcp连接</p>
+<ul>
+<li>客户端发送 SYN包，进入SYN-SEND状态，等待服务器确认</li>
+<li>服务器 收到SYN包，确认客户的sYN，自己也发送一个SYN-ACK包，进入SYN-RECV状态</li>
+<li>客户端收到 SYN-ACK包，发生ACK包，发送完毕，客服端和服务器进入ESTABLISHED状态，完成3次握手，</li>
+</ul>
+<h3 id="SYN攻击"><a href="#SYN攻击" class="headerlink" title="SYN攻击"></a>SYN攻击</h3><p>Server发送SYN-ACK后，收到client的ACK之前的TCP连接称为TCP半连接 half-open connect</p>
+<ul>
+<li>server<ul>
+<li>SYN-RECV</li>
+</ul>
+</li>
+</ul>
+<p>等待client确认， 需要不断重发超时，导致正常的SYN因为队列满而被丢弃</p>
+<h2 id="4次挥手"><a href="#4次挥手" class="headerlink" title="4次挥手"></a>4次挥手</h2><p>Four-way wavehand。</p>
+<ul>
+<li>Client send FIN ,Client =&gt; FIN_WAIT_1</li>
+<li>Server get FIN ,send ACK, Server =&gt; CLOSE_WAIT</li>
+<li>Server send FIN, Server =&gt; LAST_ACK</li>
+<li>Client get FIN, Client =&gt; TIME_WAIT, send ACK , Server =&gt; CLOSED</li>
+</ul>
+<p>##为什么建立连接是三次握手，而关闭连接却是四次挥手呢？</p>
+<h2 id="为什么TIME-WAIT状态需要经过2MSL-最大报文段生存时间-才能返回到CLOSE状态"><a href="#为什么TIME-WAIT状态需要经过2MSL-最大报文段生存时间-才能返回到CLOSE状态" class="headerlink" title="为什么TIME_WAIT状态需要经过2MSL(最大报文段生存时间)才能返回到CLOSE状态"></a>为什么TIME_WAIT状态需要经过2MSL(最大报文段生存时间)才能返回到CLOSE状态</h2><p>一、保证TCP协议的全双工连接能够可靠关闭<br>二、保证这次连接的重复数据段从网络中消失</p>
+<p>参考：<br><a href="https://www.jianshu.com/p/ef892323e68f" target="_blank" rel="noopener">1</a><br><a href="https://zhuanlan.zhihu.com/p/33889997" target="_blank" rel="noopener">2</a></p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/" rel="tag">network</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+
+    
+    <article id="post-myblog/Spring2vue-my-code-life-4-about-android" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/14/myblog/Spring2vue-my-code-life-4-about-android/"
+    >Spring2vue-my-code-life-4-about-android</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/14/myblog/Spring2vue-my-code-life-4-about-android/" class="article-date">
+  <time datetime="2020-03-13T17:25:50.000Z" itemprop="datePublished">2020-03-14</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="从Spring-到Vue-4-关于Android"><a href="#从Spring-到Vue-4-关于Android" class="headerlink" title="从Spring 到Vue 4 关于Android"></a>从Spring 到Vue 4 关于Android</h1><p>为什么会扯到Android呢，提起java，自然想起Android了呗。</p>
+<p>java有java虚拟机，Android有dvm和art。</p>
+<p>这三者有什么异同呢。</p>
+<p>第一肯定是指令集不同。但是我也想不起具体哪个打哪个了。等下查查资料。</p>
+<p>另外，jvm跑的是.class而dvm跑的是.dex。 art也是.dex.</p>
+<p>从.class到.dex经历了什么呢，为什么要这样做呢？这中间的具体流程是怎样的呢？</p>
+<p>以及，dvm和art有什么不同呢，为什么要这样做呢？ 怎样实现的呢？ 原理是什么呢？</p>
+<p>说起Android虚拟机。我们都知道Android是一个基于Linux的操作系统，那么Android与Ubuntu有什么区别呢。</p>
+<p>Android应用正在跑的进场，与Linux中的进程有什么区别，各自是怎样的呢？</p>
+<p>一个Android应用从</p>
+<ul>
+<li>下载</li>
+<li>安装</li>
+<li>手机桌面获取安装包信息</li>
+<li>启动应用程序</li>
+<li>应用程序挂起</li>
+<li>待机</li>
+<li>关闭</li>
+</ul>
+<p>发生了什么</p>
+<p>下载自然是http请求，io操作。但是具体怎么实现呢，还得查一下。</p>
+<p>安装就涉及到art dvm的区别了</p>
+<p>手机获取安装包信息，就涉及到各种manager的关系了。</p>
+<p>启动应用程序，就涉及到Android启动模式的相关问题了。</p>
+<p>Android声明周期</p>
+<p>Android四大组件</p>
+<p>四大组件的相关</p>
+<p>四大组件与进程的关系</p>
+<p>四大组件的通信方式呢</p>
+<p>那进程的通信方式呢</p>
+<p>与Linux有什么区别呢</p>
+<p>与原生的通信方式呢。</p>
+<p>Android数据库。事务，触发器</p>
+<ul>
+<li>greendao</li>
+<li>realm</li>
+<li>room</li>
+</ul>
+<p>Android事件分发机制</p>
+<p>分发机制首先都有屏幕，那Android window相关呢</p>
+<p>另外就是recyclerview， 请问recyclerview</p>
+<p>Android framework</p>
+<ul>
+<li>Activity Manager</li>
+<li>Window Manager</li>
+<li>Content Provider</li>
+<li>View System</li>
+<li>Notification Manager</li>
+<li>Package Manager</li>
+<li>Telephony Manager</li>
+<li>Resource Manager</li>
+<li>Location Manager</li>
+<li>XMMP Service</li>
+</ul>
+<p>Android</p>
+<ul>
+<li>Linux Kernel</li>
+<li>Libraries &amp; android runtime</li>
+<li>application framework</li>
+<li>application</li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+
+    
+    <article id="post-myblog/FixBug-引发bug的原因在于规划" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/12/myblog/FixBug-%E5%BC%95%E5%8F%91bug%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%9C%A8%E4%BA%8E%E8%A7%84%E5%88%92/"
+    >FixBug-引发bug的原因在于规划</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/12/myblog/FixBug-%E5%BC%95%E5%8F%91bug%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%9C%A8%E4%BA%8E%E8%A7%84%E5%88%92/" class="article-date">
+  <time datetime="2020-03-11T16:22:27.000Z" itemprop="datePublished">2020-03-12</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="FixBug-引发bug的原因在于规划"><a href="#FixBug-引发bug的原因在于规划" class="headerlink" title="FixBug-引发bug的原因在于规划"></a>FixBug-引发bug的原因在于规划</h1><p>刚修了一个bug。bug的表现是数据库到显示列表的过滤规则失效。</p>
+<p>引发bug的原因在于:</p>
+<ul>
+<li>初始规划不科学，可行的情况下存有漏洞</li>
+<li>中间经过要求后修改了代码逻辑，但是没有做足够有效的验证</li>
+</ul>
+<h3 id="偏算法的逻辑代码一定要有完整的规则，用例，测试，用例图等。不然后续出错后调整的成本太大"><a href="#偏算法的逻辑代码一定要有完整的规则，用例，测试，用例图等。不然后续出错后调整的成本太大" class="headerlink" title="偏算法的逻辑代码一定要有完整的规则，用例，测试，用例图等。不然后续出错后调整的成本太大"></a>偏算法的逻辑代码一定要有完整的规则，用例，测试，用例图等。不然后续出错后调整的成本太大</h3>
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+
+    
+    <article id="post-interview/笔试-博乐" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/11/interview/%E7%AC%94%E8%AF%95-%E5%8D%9A%E4%B9%90/"
+    >笔试-博乐</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/11/interview/%E7%AC%94%E8%AF%95-%E5%8D%9A%E4%B9%90/" class="article-date">
+  <time datetime="2020-03-11T11:57:18.000Z" itemprop="datePublished">2020-03-11</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="笔试，还挺意思"><a href="#笔试，还挺意思" class="headerlink" title="笔试，还挺意思"></a>笔试，还挺意思</h2><ul>
+<li>逻辑题</li>
+<li>其他<ul>
+<li>mipmap是什么</li>
+<li>unit生命周期，</li>
+</ul>
+</li>
+<li>算法题</li>
+</ul>
+<h3 id="Mipmap"><a href="#Mipmap" class="headerlink" title="Mipmap"></a>Mipmap</h3><p>//todo</p>
+<h3 id="unit生命周期"><a href="#unit生命周期" class="headerlink" title="unit生命周期"></a>unit生命周期</h3><p>//todo</p>
+<h3 id="算法题"><a href="#算法题" class="headerlink" title="算法题"></a>算法题</h3><h4 id="无序数组求第二小数"><a href="#无序数组求第二小数" class="headerlink" title="无序数组求第二小数"></a>无序数组求第二小数</h4><h4 id="求数组最大子数组"><a href="#求数组最大子数组" class="headerlink" title="求数组最大子数组"></a>求数组最大子数组</h4>
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interview/" rel="tag">interview</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+
+    
+    <article id="post-interview/面试-华为-通用软件工程师" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/11/interview/%E9%9D%A2%E8%AF%95-%E5%8D%8E%E4%B8%BA-%E9%80%9A%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/"
+    >面试-华为-通用软件工程师</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/11/interview/%E9%9D%A2%E8%AF%95-%E5%8D%8E%E4%B8%BA-%E9%80%9A%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="article-date">
+  <time datetime="2020-03-11T11:45:56.000Z" itemprop="datePublished">2020-03-11</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="华为云核心网-通用软件工程师-20200310"><a href="#华为云核心网-通用软件工程师-20200310" class="headerlink" title="华为云核心网 通用软件工程师 20200310"></a>华为云核心网 通用软件工程师 20200310</h2><ul>
+<li>自我介绍</li>
+<li>语言<ul>
+<li>java &amp; JavaScript</li>
+</ul>
+</li>
+<li>项目经历<ul>
+<li>miui的经历</li>
+</ul>
+</li>
+<li>JVM GC<ul>
+<li>发展逻辑滤了一遍</li>
+</ul>
+</li>
+<li>计算机网络<ul>
+<li>ISO 7层<ul>
+<li>只记得5层了，忘记了七层是什么</li>
+</ul>
+</li>
+<li>子网掩码<ul>
+<li>255.255.255.0的局域网能分配多少个ip<ul>
+<li>答错了，255.255.255.0 和255.255.255.255都不能用作ip</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>面试的这个视频 7层<ul>
+<li>随便说了一下</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据结构<ul>
+<li>顺序表 链表<ul>
+<li>怎样选择使用</li>
+</ul>
+</li>
+<li>平衡二叉树的定义<ul>
+<li>没答出来,答了二叉排序树。定义是左右子树高度差小于1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>算法<ul>
+<li>字符串倒转<ul>
+<li>“<a href="http://www.abc.com&quot;" target="_blank" rel="noopener">www.abc.com&quot;</a> -&gt; “com.abc.www”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="算法题"><a href="#算法题" class="headerlink" title="算法题"></a>算法题</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">"www.abc.com"</span></span><br><span class="line">a.split(<span class="string">'.'</span>).reverse().join(<span class="string">'.'</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h2><ul>
+<li>自我介绍</li>
+<li>java , vue ,spring 都问都讲了，偏问项目</li>
+<li>不太记得了</li>
+<li>算法题</li>
+</ul>
+<h3 id="算法题-1"><a href="#算法题-1" class="headerlink" title="算法题"></a>算法题</h3><p>数组中有正数和负数，正数代表向右，负数代表向左。当两数字相撞时取绝对值大的数字，保证保持整个数组稳态。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> deal = <span class="function"><span class="keyword">function</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> stack = []</span><br><span class="line">  arr.map(<span class="function"><span class="params">i</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.info(stack)</span><br><span class="line">    <span class="keyword">if</span> (stack.length == <span class="number">0</span>) &#123;</span><br><span class="line">      stack.push(i)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// duibi tail he i</span></span><br><span class="line">      <span class="keyword">let</span> t = stack[stack.length<span class="number">-1</span>]</span><br><span class="line">      <span class="keyword">if</span> (t * i &gt; <span class="number">0</span>) &#123;<span class="comment">// 同方向</span></span><br><span class="line">        stack.push(i)</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (t * i &lt;<span class="number">0</span>) &#123;<span class="comment">//不同方向</span></span><br><span class="line">        <span class="keyword">if</span> (t &lt;<span class="number">0</span> &amp;&amp; i &gt;<span class="number">0</span>)&#123;</span><br><span class="line">          stack.push(i)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (t&gt; <span class="number">0</span> &amp;&amp; i &lt;<span class="number">0</span>)&#123;</span><br><span class="line">          <span class="comment">//要撞</span></span><br><span class="line">          <span class="keyword">let</span> value = t + i</span><br><span class="line">          value = value &gt; <span class="number">0</span> ?  t:i</span><br><span class="line">          stack[stack.length<span class="number">-1</span>] = value</span><br><span class="line">          <span class="comment">//维持前面稳定</span></span><br><span class="line">          <span class="keyword">let</span> change = stack.length &gt; <span class="number">1</span></span><br><span class="line">          <span class="keyword">while</span>(change) &#123;</span><br><span class="line">            t = stack.pop();</span><br><span class="line">            tp = stack.pop();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (tp &gt; <span class="number">0</span> &amp;&amp; t &lt;<span class="number">0</span>) &#123;</span><br><span class="line">              value = tp + t</span><br><span class="line">              value = value &gt; <span class="number">0</span> ?  tp:t</span><br><span class="line">              stack.push(value)</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              change = <span class="literal">false</span></span><br><span class="line">              stack.push(tp)</span><br><span class="line">              stack.push(t)</span><br><span class="line">            &#125;&#125;&#125;&#125;&#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> stack</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interview/" rel="tag">interview</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        Kfdykme
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/logo.jpg" alt="枋"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['嘤嘤嘤', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+    
+  </div>
+</body>
+
+</html>

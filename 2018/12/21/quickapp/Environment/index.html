@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" >
+
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    quickapp 踩坑记（一） 入门坑与为什么踩这个坑 |  枋
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article id="post-quickapp/Environment" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  quickapp 踩坑记（一） 入门坑与为什么踩这个坑
+</h1>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2018/12/21/quickapp/Environment/" class="article-date">
+  <time datetime="2018-12-20T16:59:32.000Z" itemprop="datePublished">2018-12-21</time>
+</a>
+      
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.6k字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">5分钟</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="quickapp-踩坑记-一-入门坑与为什么踩这个坑"><a href="#quickapp-踩坑记-一-入门坑与为什么踩这个坑" class="headerlink" title="quickapp 踩坑记 (一) 入门坑与为什么踩这个坑"></a>quickapp 踩坑记 (一) 入门坑与为什么踩这个坑</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>主要讲了</p>
+<ul>
+<li>ubuntu + atom 搭建快应用开发环境</li>
+<li>调试相关<ul>
+<li>无法通过wifi调试以及可能原因</li>
+<li>由于调试导致的上传失败</li>
+</ul>
+</li>
+<li>通过 adb 调试快应用</li>
+<li>闲话：为何入坑</li>
+</ul>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><p>我的ubuntu是 18.04,当然这并不重要，应该说我的系统是ubuntu。环境配置就是很正常的安装一些东西就好了。</p>
+<p>目前快应用有3个IDE，一个官方的IDE和华为的两个版本的IDE,看上去都是基于VSCODE的，另外他们都没有linux的版本…</p>
+<p>官方好像也有推荐使用:</p>
+<ul>
+<li>sublxxx(一看我名字都记不住就知道我不喜欢用这个）</li>
+<li>vscode (安装快应用对应的插件)</li>
+<li>webstorm(好像没有免费版，我就没用了，尊重一下JetBrains)</li>
+</ul>
+<p>首先 install <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node</a></p>
+<p>然后 install <a href="https://atom.io" target="_blank" rel="noopener">atom</a></p>
+<h4 id="配置一下文本编辑工具"><a href="#配置一下文本编辑工具" class="headerlink" title="配置一下文本编辑工具"></a>配置一下文本编辑工具</h4><p>打开 atom</p>
+<p>–&gt; 菜单栏 Edit</p>
+<p>–&gt; 选择 Preferences (window下<em>可能</em>是File-&gt;Settings)</p>
+<p>–&gt; 点击按钮 Open Config Folder</p>
+<p>–&gt; 打开文件 config.cson</p>
+<p>配置对ux文件的语法高亮</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"*":</span><br><span class="line">  core:</span><br><span class="line">    customFileTypes:</span><br><span class="line">      "text.html.basic": [</span><br><span class="line">        <span class="string">"ux"</span></span><br><span class="line">      ]</span><br></pre></td></tr></table></figure>
+
+<p>然后随意弄一下UI theme 和 Syntax theme</p>
+<p>我的配置完之后是这样子的<br><img src="/images/quickapp_environment_1.png" alt=""></p>
+<p>然后就算很正常的npm install -g hap-toolkit</p>
+<blockquote>
+<p>可以选择装一个emmet插件辅助自动补全</p>
+</blockquote>
+<p>走起～</p>
+<h3 id="关于调试"><a href="#关于调试" class="headerlink" title="关于调试"></a>关于调试</h3><h4 id="无法在线更新"><a href="#无法在线更新" class="headerlink" title="无法在线更新"></a>无法在线更新</h4><p>一开始的时候遇到过无法在线安装的问题，后来发现不止是快应用，其他用wifi调试的类似开发方式有时也会遇到。这里的其他开发方式指的是 Ionic 的 Ionic DevApp和React Native的Expo。这两者也是在手机上运行了一个’容器’，方便实现热加载，利用chrome dev tool进行调试等。</p>
+<p>言归正传，快应用调试的时候运行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run server</span><br></pre></td></tr></table></figure>
+<p>会生成一堆东西:</p>
+<p><img src="/images/quickapp_environment_2.png" alt=""></p>
+<p>这里生成ip地址不一定是对应的本机的地址(当然我图中的是正确的)。如果电脑上装了虚拟机/docker/其他容器，这里的服务器地址<strong>有可能</strong>会是虚拟机的网卡的ip,同时二维码对应的也是虚拟机的ip，这样扫码是<strong>不能在线更新</strong>的（因为连不上)</p>
+<p>如果扫玛一直扫不出来的话，可以考虑换一个命令行终端。比如我之前用Win10的cmd.exe的时候就不像一个二维码(顺手安利一波<em>cmder</em>)。</p>
+<p>当然直接手动输入地址也是ok的。</p>
+<blockquote>
+<p>在这里顺带感谢一下在我遇到这个问题时群里通过ip地址看出是虚拟机ip的那个大哥</p>
+</blockquote>
+<p> ps:这个问题在官方支持usb调试之后就与我绝缘了。</p>
+<h4 id="无法上传"><a href="#无法上传" class="headerlink" title="无法上传"></a>无法上传</h4><p>在调用快应用的系统能力之网络之上传时，有可能会发生这样的错误</p>
+<p><img src="/images/quickapp_environment_3.png" alt=""></p>
+<p>代码是这样子的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> request <span class="keyword">from</span> <span class="string">'@system.request'</span> <span class="comment">//正常的导入</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 正常的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">request.upload(&#123;</span><br><span class="line">  url : <span class="string">"http://"</span>,</span><br><span class="line">  files : o.files,</span><br><span class="line">  data : o.data,</span><br><span class="line">  method:<span class="string">"POST"</span>,</span><br><span class="line">  success : onSuccess,</span><br><span class="line">  fail: onFetchFail</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>这通常是发生在开了调试工具的时候，一边进行调试一边上传就会报错：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">发生了错误: 1000</span><br><span class="line">Stream Closed</span><br></pre></td></tr></table></figure>
+<h5 id="处理方法："><a href="#处理方法：" class="headerlink" title="处理方法："></a>处理方法：</h5><p>这时候只需要拔掉你的usb线,再次上传，一切ok。</p>
+<p>其实就是退出调试模式，单纯运行快应用。</p>
+<p>如果想要查看上传过程中的log的话可以使用adb。</p>
+<h3 id="adb-调试快应用"><a href="#adb-调试快应用" class="headerlink" title="adb 调试快应用"></a>adb 调试快应用</h3><p>鉴于快应用开发的应该是前端的同学，可能不太了解adb是什么<br>adb = Android Debug Bridge ,android开发可能会用得比较多一点。</p>
+<p>一般想要配置adb的话，下载一个android sdk tool就好了(把整个androidt stuido下载下来也是可以的)，然后配置环境变量,<br>一般adb是在</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ANDROID_SDK_HOME&#x2F;platform-tools&#x2F;</span><br></pre></td></tr></table></figure>
+<p>这个目录下。</p>
+<p>有时候不想打开chrome-dev-tool，只想在命令行查看log,就可以使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.info(<span class="string">'你的log'</span>)</span><br><span class="line"><span class="comment">// 好像需要console.info()才可以</span></span><br><span class="line"><span class="comment">// console.log()的日志不能被下面的命令抓取</span></span><br><span class="line"><span class="comment">//（记得不清+不想做实验了)</span></span><br></pre></td></tr></table></figure>
+<p>然后在命令行输入:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb logcat | grep JsConsole</span><br></pre></td></tr></table></figure>
+
+<p>adb logcat 是读取手机运行的日志，快应用运行的日志自然也包含在里面。</p>
+<p>然后使用 grep JsConsole 进行筛选。之所以用<em>JsConsole</em>，是因为我目测得出快应用引擎(无论是官方的快应用预览器还是厂商自己的快应用引擎) 都是这个tag。</p>
+<p>windows同学没有grep命令的话……可以使用windows上支持bash的终端工具。</p>
+<blockquote>
+<p>最近在ubutn上 adb 有时会与 npm run server 冲突，需要关掉其中一个（或者会自动帮你关到其中一个)</p>
+</blockquote>
+<h3 id="一些闲-fei4-话"><a href="#一些闲-fei4-话" class="headerlink" title="一些闲(fei4)话"></a>一些闲(fei4)话</h3><p>比起前端开发，我更加熟悉的可能是android端的开发。虽然也大概清楚前端开发是怎么一回事，但是完完整整地用标记语言+js+css开发一个东西的经验并不是很多。所以如有错漏的，不专业的地方(后续会很多)请轻喷。写这篇东西一是为了征文大赛，二是为了顺带梳理一番开发过程中遇到的问题。</p>
+<p>同时最近忙成狗的我也没时间看别人的征文，如果有些内容已经有人指出了，如有巧合纯属雷同，啦啦啦啦啦啦。</p>
+<p>在年初的时候学长让了解一下快应用和flutter，然后被flutter的语法劝退之后尝试写起了快应用。想着当时微信小程序封测的时候也对小程序浅尝辄止了一番（学校的小团体搞了比赛，赚了个androd高级进阶和鼠标让我甚是高兴，难以忘怀，特此讨打），但是那时候由于种种原因一直在AIDE上写app，也就没机会没能力继续接触。</p>
+<p>而去年学校微信小程序比赛搞起来，发现小程序的IDE和开发流程都变了很多。（2333，无意义感慨）</p>
+<p>刚好快应用出来，想着有机会从初期接触一个框架，然后了解这个东西是怎么一步步完善起来的，于是决定踩坑。</p>
+
+      
+      <!-- reward -->
+      
+      <!-- <div id="reward-btn">
+        打赏
+      </div> -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>版权声明： </strong s>
+              本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow"
+                target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2018/12/21/quickapp/Environment/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/quickapp/" rel="tag">quickapp</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2019/02/19/android/source/AppCompatActivity/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Android AppCompatActivity
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2018/11/24/interview/mianshi/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Android 面试经历吧，称不上经验</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2020
+        Kfdykme
+      </li>
+      <li>
+        
+        Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <span>
+  <i>PV:<span id="busuanzi_value_page_pv"></span></i>
+  <i>UV:<span id="busuanzi_value_site_uv"></span></i>
+</span>
+        
+      </li>
+      
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/logo.jpg" alt="枋"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['嘤嘤嘤', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+  }
+
+</script>
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+
+
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+
+
+    
+  </div>
+</body>
+
+</html>
